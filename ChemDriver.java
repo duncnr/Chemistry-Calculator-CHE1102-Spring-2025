@@ -15,7 +15,7 @@ public class ChemDriver {
         } catch (NumberFormatException e) {}
 
         while (choice > 0) {
-            System.out.print("Select a number 0-7 based on the options below:\n" +
+            System.out.print("Select a number 0-8 based on the options below:\n" +
                     "  0) Exit\n" +
 		    "  1) Gas Laws\n" +
 		    "  2) Solutions\n" +
@@ -23,7 +23,8 @@ public class ChemDriver {
 		    "  4) Equilibrium\n" +
 		    "  5) Acid Base Equilibrium\n" +
 		    "  6) Buffers\n" +
-                    "  7) Help\n" +
+		    "  7) Electrochemistry\n" +
+                    "  8) Help\n" +
                     "Enter: ");
             choice = sc.nextInt();
             select(sc, choice);
@@ -50,15 +51,19 @@ public class ChemDriver {
                 break;
 
             case 4:
-		// new EquilibriumDriver(sc, "", saved);
+		new EquilibriumDriver(sc, "", saved);
                 break;
 
 	    case 5:
-		// new AcidBaseEquiDriver(sc, "", saved);
+		new AcidBaseEquiDriver(sc, "", saved);
 		break;
 
 	    case 6:
-		// new BuffersDriver(sc, "", saved);
+		new BufferDriver(sc, "", saved);
+		break;
+
+	    case 7:
+		new ElectroDriver(sc, "", saved);
 		break;
 
             default:
